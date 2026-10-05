@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-21T00:00:00Z",
+  "title": "Design System: Schoolify",
+  "extensions": {
+    "colorMeta": {
+      "ink": { "role": "neutral", "displayName": "Ink Navy", "canonical": "#182236", "tonalRamp": ["#111724", "#182236", "#29354a", "#465269", "#68758a", "#8c98aa", "#c0c7d1", "#f5f7fa"] },
+      "sidebar": { "role": "neutral", "displayName": "Sidebar Navy", "canonical": "#152236", "tonalRamp": ["#0d1523", "#152236", "#26364f", "#455873", "#718198", "#a8b4c2", "#d8e0e8", "#f5f7fa"] },
+      "canvas": { "role": "neutral", "displayName": "Cool Canvas", "canonical": "#f5f7fa", "tonalRamp": ["#1d2635", "#334052", "#5c6a7b", "#8793a1", "#aeb7c2", "#cbd2da", "#e3e8ed", "#f5f7fa"] },
+      "surface": { "role": "neutral", "displayName": "Surface White", "canonical": "#ffffff", "tonalRamp": ["#202831", "#3d4752", "#626b75", "#8a929a", "#aeb5bc", "#d0d4d8", "#e9eaec", "#ffffff"] },
+      "line": { "role": "neutral", "displayName": "Rule Gray", "canonical": "#e6eaf0", "tonalRamp": ["#323b48", "#505965", "#737b86", "#9da4ad", "#bcc2c9", "#d2d6dc", "#e1e4e8", "#e6eaf0"] },
+      "muted": { "role": "neutral", "displayName": "Muted Gray", "canonical": "#7c8797", "tonalRamp": ["#222c3b", "#3d4a5b", "#596678", "#7c8797", "#9ba4b0", "#bcc3cb", "#dfe3e8", "#f5f7fa"] },
+      "mint": { "role": "primary", "displayName": "Clear Mint", "canonical": "#6fd5b1", "tonalRamp": ["#164e40", "#1e725a", "#319676", "#49b58e", "#6fd5b1", "#9cdec6", "#c8efe0", "#e9f8f2"] },
+      "amber": { "role": "secondary", "displayName": "Warm Amber", "canonical": "#f1b96f", "tonalRamp": ["#6a3d0b", "#9a5b12", "#c57c25", "#e3a251", "#f1b96f", "#f7d39e", "#fce7c5", "#fff4e7"] },
+      "rose": { "role": "secondary", "displayName": "Soft Rose", "canonical": "#e79aa5", "tonalRamp": ["#6b2433", "#963b4b", "#bd5e6d", "#d67f8d", "#e79aa5", "#f0bdc4", "#f8dfe2", "#fff0f2"] },
+      "slate": { "role": "tertiary", "displayName": "Quiet Slate", "canonical": "#9aa8bb", "tonalRamp": ["#283647", "#405269", "#60748d", "#7f91a7", "#9aa8bb", "#bac4d1", "#d7dee7", "#edf1f6"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Dashboard Title", "purpose": "Page titles and greetings; the main anchor of the task surface." },
+      "body": { "displayName": "Operational Sans", "purpose": "One readable voice for copy, controls, lists, and metadata." },
+      "label": { "displayName": "Wayfinding Label", "purpose": "Compact metadata and navigation labels." }
+    },
+    "shadows": [
+      { "name": "panel-ambient", "value": "0 16px 42px rgba(25, 43, 67, 0.06)", "purpose": "Quiet separation for white work panels." },
+      { "name": "toast-lift", "value": "0 16px 35px rgba(31, 80, 59, 0.14)", "purpose": "Temporary confirmation feedback." }
+    ],
+    "motion": [
+      { "name": "state-standard", "value": "180ms ease", "purpose": "Hover, focus, and control state changes." },
+      { "name": "composer-reveal", "value": "240ms ease-out", "purpose": "Inline follow-up composer reveal." }
+    ],
+    "breakpoints": [
+      { "name": "tablet", "value": "820px" },
+      { "name": "compact", "value": "560px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The single clear action in a region.",
+      "html": "<button class=\"ds-btn-primary\">ADD FOLLOW-UP</button>",
+      "css": ".ds-btn-primary { background: #6fd5b1; color: #15332c; padding: 0 14px; height: 40px; border: 0; border-radius: 7px; font: 700 12px/1 'DM Sans', sans-serif; transition: background .18s ease, transform .18s ease; } .ds-btn-primary:hover { background: #80dfbd; } .ds-btn-primary:focus-visible { outline: 3px solid rgba(111,213,177,.55); outline-offset: 3px; } .ds-btn-primary:active { transform: translateY(1px); }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "A quieter adjacent action.",
+      "html": "<button class=\"ds-btn-secondary\">VIEW SCHEDULE</button>",
+      "css": ".ds-btn-secondary { background: #fff; color: #5f6d80; padding: 0 14px; height: 40px; border: 1px solid #e6eaf0; border-radius: 7px; font: 700 12px/1 'DM Sans', sans-serif; transition: border-color .18s ease, color .18s ease; } .ds-btn-secondary:hover { border-color: #ccd5df; color: #182236; } .ds-btn-secondary:focus-visible { outline: 3px solid rgba(111,213,177,.55); outline-offset: 3px; }"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "refersTo": "search-field",
+      "description": "Compact workspace search with a visible focus ring.",
+      "html": "<label class=\"ds-input\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m21 21-4.35-4.35m2.1-5.4a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.8\"/></svg><input placeholder=\"Search students\" /></label>",
+      "css": ".ds-input { display: flex; align-items: center; gap: 9px; height: 41px; padding: 0 12px; border: 1px solid #e6eaf0; border-radius: 10px; color: #98a4b3; background: #fff; } .ds-input:focus-within { border-color: #a9dfcc; box-shadow: 0 0 0 3px rgba(111,213,177,.12); } .ds-input input { min-width: 0; flex: 1; border: 0; outline: 0; color: #182236; background: transparent; font: 400 12px/1.4 'DM Sans', sans-serif; }"
+    },
+    {
+      "name": "Status Chip",
+      "kind": "chip",
+      "refersTo": "status-chip",
+      "description": "Short state label paired with a meaningful word.",
+      "html": "<span class=\"ds-chip\">TO REVIEW</span>",
+      "css": ".ds-chip { display: inline-flex; align-items: center; min-height: 21px; padding: 0 7px; border-radius: 6px; color: #9a641e; background: #fff4e7; font: 750 9px/1 'DM Sans', sans-serif; }"
+    },
+    {
+      "name": "Schedule Rail",
+      "kind": "custom",
+      "refersTo": "schedule-rail",
+      "description": "Time, color state, title, and context in one scan-friendly row.",
+      "html": "<div class=\"ds-schedule\"><span class=\"ds-time\">09:35<small>10:30</small></span><span class=\"ds-marker\"></span><span class=\"ds-copy\"><strong>French</strong><small>Room 108 · Mme Le Gall</small></span></div>",
+      "css": ".ds-schedule { display: flex; align-items: center; gap: 12px; min-height: 59px; border-top: 1px solid #edf0f4; } .ds-time { display: flex; width: 43px; flex-direction: column; gap: 3px; color: #56667a; font: 750 11px/1 'DM Sans', sans-serif; } .ds-time small, .ds-copy small { color: #7c8797; font: 400 10px/1.2 'DM Sans', sans-serif; } .ds-marker { width: 6px; height: 29px; border-radius: 4px; background: #6fd5b1; } .ds-copy { display: flex; flex-direction: column; gap: 4px; } .ds-copy strong { color: #182236; font: 700 12px/1 'DM Sans', sans-serif; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Quiet Timetable",
+    "overview": "Schoolify treats the school day like a well-kept timetable: the surface is calm, the important changes are easy to spot, and every screen preserves the user's sense of where they are in the day. The visual language is operational rather than ornamental. It uses a deep navy anchor, cool paper-like surfaces, one mint action color, and small state colors that behave as signals rather than decoration.\n\nThe layout is composed from readable lists, schedule rails, and one-off feature panels instead of repeated card grids. The system should feel useful at 08:30 on a busy morning: clear enough to scan quickly, warm enough to feel human, and restrained enough to stay out of the way.",
+    "keyCharacteristics": ["Deep navy navigation with a small mint active-state signal.", "Cool white workspace with 1px structural rules.", "One workhorse sans family, with compact labels and clear weight changes.", "Timetable rhythm: time, state, title, context."],
+    "rules": [
+      { "name": "The Signal Rarity Rule", "body": "Mint, amber, rose, and slate are reserved for state, selection, and action. They should never become background decoration across the page.", "section": "colors" },
+      { "name": "The One Voice Rule", "body": "Use one sans family throughout the product. Create contrast with weight, color, and spacing rather than introducing a display face into operational UI.", "section": "typography" }
+    ],
+    "dos": ["Do keep one primary action per region and reserve mint for that action or a clear positive state.", "Do preserve the sequence of time, state, title, and context in planning-related content.", "Do use real, semantic buttons and links with visible focus states.", "Do label synthetic demo data when it appears in a shipped prototype."],
+    "donts": ["Don't turn every section into a grid of identical cards.", "Don't use gradients, glass effects, hard-offset shadows, or decorative borders as product identity.", "Don't use color as the only signal for a status; pair it with text or structure.", "Don't introduce a second font family for operational UI."]
+  }
+}
